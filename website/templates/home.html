@@ -1,3 +1,8 @@
-{% extends 'base.html' %} {% block content %}
-<h1>Hey!</h1>
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+  <h1>Authenticated</h1>
+{% else %}
+  {% include 'login.html' %}
+{% endif %}
 {% endblock %}
