@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card col-md-4 mx-auto">
+  <h5 class="card-header">
+    <strong>ID: </strong>{{ customer_record.id }}
+  </h5>
+  <div class="card-body">
+    <h5 class="card-title mb-3">
+      <strong>Name: </strong>{{ customer_record.first_name }} {{ customer_record.last_name }}
+    </h5>
+    <div class="card-text mb-1">
+      <strong>Email: </strong>{{ customer_record.email }}
+    </div>
+    <div class="card-text mb-1">
+      <strong>Phone: </strong>{{ customer_record.phone }}
+    </div>
+    <div class="card-text mb-1">
+      <strong>Address: </strong>{{ customer_record.address }}
+    </div>
+    <div class="card-text mb-1">
+      <strong>City: </strong>{{ customer_record.city }}
+    </div>
+    <div class="card-text mb-1">
+      <strong>State: </strong>{{ customer_record.state }}
+    </div>
+    <div class="card-text mb-1">
+      <strong>Zipcode: </strong>{{ customer_record.zipcode }}
+    </div>
+    <div class="card-text mb-1">
+      <strong>Created at: </strong>{{ customer_record.created_at }}
+    </div>
+
+    <div class="text-center mt-3">
+      <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
